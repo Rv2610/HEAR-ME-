@@ -9,6 +9,16 @@ import nltk
 from django.contrib.staticfiles import finders
 from django.contrib.auth.decorators import login_required
 
+
+"""   nltk resources used in project
+
+nltk.download('omw-1.4')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
+
+"""
+
 def home_view(request):
 	return render(request,'home.html')
 
