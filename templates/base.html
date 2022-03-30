@@ -40,7 +40,7 @@ li a:hover {
   color: #feda6a;
   font-weight: bold;
 }
-.form-style button{
+.form button{
 
   width: 89%;
 	height:70%;
@@ -71,6 +71,40 @@ li a:hover {
   padding-top: 20px;
 
 }
+
+  .container {
+    border-radius: 5px;
+    background-color: #404040;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
 
 .left {
   left: 15;
@@ -166,10 +200,7 @@ body
 .form-style textarea,
 .form-style select
 {
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
+
 	outline: none;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -211,7 +242,7 @@ body
 </head>
 <div style="background-color:#404040;color:#feda6a;padding:10 10 1 10;border: 1px #feda6a groove;margin-bottom:0;">
 
-<h1 align=center>Audio To Sign Language Tool</h1>
+<h1 align=center>HEAR ME!</h1>
 </div>
 <br>
 <body>

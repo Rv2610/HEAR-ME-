@@ -8,6 +8,7 @@ from nltk.stem import WordNetLemmatizer
 import nltk
 from django.contrib.staticfiles import finders
 from django.contrib.auth.decorators import login_required
+from feed.models import Contact
 
 
 """   nltk resources used in project
@@ -28,7 +29,16 @@ def about_view(request):
 
 
 def contact_view(request):
-	return render(request,'contact.html')
+    if request.method=="POST":
+        print(request)
+        name=request.POST.get('name', '')
+        email=request.POST.get('email', '')
+        phone=request.POST.get('phone', '')
+        desc=request.POST.get('desc', '')
+        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact.save()
+     
+    return render(request,'contact.html' )
 
 @login_required(login_url="login")
 def animation_view(request):
